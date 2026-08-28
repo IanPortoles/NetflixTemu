@@ -1,5 +1,6 @@
 package com.netflix.clone.dto.response;
 
+import com.netflix.clone.entity.Video;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -25,5 +26,54 @@ public class VideoResponse {
     private Instant updatedAt;
     private Boolean isInWatchList;
 
+    public VideoResponse(
+            Long id,
+            String title,
+            String description,
+            Integer year,
+            String rating,
+            Integer duration,
+            String src,
+            String poster,
+            Boolean published,
+            List<String> categories,
+            Instant createdAt,
+            Instant updatedAt) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.year = year;
+        this.rating = rating;
+        this.duration = duration;
+        this.src = src;
+        this.poster = poster;
+        this.published = published;
+        this.categories = categories;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public static VideoResponse fromEntity(Video video){
+        VideoResponse response =
+                new VideoResponse(
+                        video.getId(),
+                        video.getTitle(),
+                        video.getDescription(),
+                        video.getYear(),
+                        video.getRating(),
+                        video.getDuration(),
+                        video.getSrc(),
+                        video.getPoster(),
+                        video.isPublished(),
+                        video.getCategories(),
+                        video.getCreatedArt(),
+                        video.getUpdatedArt()
+
+                );
+        if(video.getIsInWatchlist()!=null){
+            response.setIsInWatchList(video.getIsInWatchlist());
+        }
+        return response;
+    }
 
 }
