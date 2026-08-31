@@ -1,7 +1,7 @@
 package com.netflix.clone.exception;
 
-public class AccountDeactivatedException extends RuntimeException {
-    public AccountDeactivatedException(String message){
+public class BadCredentialsException extends RuntimeException {
+    public BadCredentialsException(String message){
         super(message);
     }
 }

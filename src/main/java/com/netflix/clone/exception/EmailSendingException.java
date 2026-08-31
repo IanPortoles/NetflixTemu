@@ -1,7 +1,7 @@
 package com.netflix.clone.exception;
 
-public class AccountDeactivatedException extends RuntimeException {
-    public AccountDeactivatedException(String message){
-        super(message);
+public class EmailSendingException extends RuntimeException {
+    public EmailSendingException(String message,Throwable cause) {
+        super(message,cause);
     }
 }

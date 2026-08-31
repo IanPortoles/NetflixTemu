@@ -1,7 +1,7 @@
 package com.netflix.clone.exception;
 
-public class EmailSendingException extends RuntimeException {
-    public EmailSendingException(String message,Throwable cause) {
-        super(message,cause);
+public class InvalidCredentialsException extends RuntimeException {
+    public InvalidCredentialsException(String message) {
+        super(message);
     }
 }

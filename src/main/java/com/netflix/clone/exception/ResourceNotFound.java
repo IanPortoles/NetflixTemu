@@ -1,7 +1,7 @@
 package com.netflix.clone.exception;
 
-public class InvalidTokenException extends RuntimeException {
-    public InvalidTokenException(String message) {
+public class ResourceNotFound extends RuntimeException {
+    public ResourceNotFound(String message) {
         super(message);
     }
 }

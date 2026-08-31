@@ -1,7 +1,7 @@
 package com.netflix.clone.exception;
 
-public class InvalidRoleException extends RuntimeException {
-    public InvalidRoleException(String message) {
+public class InvalidTokenException extends RuntimeException {
+    public InvalidTokenException(String message) {
         super(message);
     }
 }
